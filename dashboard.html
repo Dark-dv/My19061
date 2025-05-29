@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      background-color: #000;
+      color: lime;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Dashboard!</h1>
+  <p>Only logged-in users can see this page.</p>
+
+  <script>
+    // Check login status
+    if (localStorage.getItem("loggedIn") !== "true") {
+      alert("⚠ Please login first!");
+      window.location.href = "index.html"; // Redirect back to login
+    }
+  </script><button onclick="logout()">Logout</button>
+
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+  }
+</script>
+
+
+
+
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: radial-gradient(circle, #0f2027, #203a43, #2c5364); font-family: 'Segoe UI', sans-serif;">
+
+    <button 
+      style="padding: 16px 50px;
+             background: linear-gradient(45deg, #ff416c, #ff4b2b);
+             color: white;
+             font-size: 20px;
+             font-weight: bold;
+             border: none;
+             border-radius: 40px;
+             box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
+             cursor: pointer;
+             transition: all 0.4s ease;
+             letter-spacing: 1px;"
+      onmouseover="this.style.transform='scale(1.1)'; this.style.background='linear-gradient(45deg, #ff4b2b, #ff416c)'; this.style.boxShadow='0 12px 30px rgba(255, 65, 108, 0.7)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.background='linear-gradient(45deg, #ff416c, #ff4b2b)'; this.style.boxShadow='0 8px 20px rgba(255, 65, 108, 0.5)';"
+    >
+     <a href="hello.html">  ❤ Beautiful Button </a>
+    </button>
+
+  </div>
+
+
+
+</body>
+</html>
